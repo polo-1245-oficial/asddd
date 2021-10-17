@@ -50,7 +50,7 @@ header{
     margin-top: -6%;
     width: 18vw;
     height: 12vh;
-    background-image: url("../icons/sus.png");
+    background-image: url("icons/sus.png");
     background-size: contain;
     background-repeat: no-repeat;
     transform: scaleY(-1);
