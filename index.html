@@ -225,7 +225,6 @@
             <nav>
                 <ul id="bar">
                     <li><a id="nav-logo" href="https://www.amogos.studio"></a></li>
-                    <li><a id="nav-back" href="https://www.jostroos.ml">Jostro OS</a></li>
                     <li><a id="nav-home" class="now" href="index.html">Home</a></li>
                     <li><a id="nav-install" href="install.html">Install Instructions</a></li>
                     <li><a id="nav-startpage" href="startpage/">Startpage</a></li>
@@ -238,7 +237,7 @@
                 <span id="text-logo">AmogOS</span>
             </div>
             <div id="slogan-container">
-                <span id="slogan">A sus OS for aSUS Pi</span>
+                <span id="slogan">A sus OS for aSUS cumputer</span>
             </div>
         </div>
         <div id="download-container">
@@ -279,19 +278,26 @@
                     <p>Username: amogos</p>
                     <p>Password: amogos</p>
                     <br/>
-                    <button id="button3" class="buttons downloadButtons">Download</button>
+                    <button id="button3" class="buttons downloadButtons">Release page</button>
+                </div>
+                <div class="columns">
+                    <p class="column-title">x86_64 Version</p>
+                    <p>v1.4.0</p>
+                    <p>Username: amogos</p>
+                    <p>Password: amogos</p>
+                    <br/>
+                    <button id="button4" class="buttons downloadButtons">Torrent Download</button>
                 </div>
             </div>
             </div>
         </div>
-        <video id="rickroll" src="rickroll.mp4" preload="none" style="pointer-events: none;">Too bad, Stop using the old damn shitty sus browsers! I can't even rickroll you</video>
+        <video id="rickroll" src="rickroll.mp4" preload="none" style="pointer-events: none;">Too bad, Stop using the old sussy browsers! I can't even rickroll you :p</video>
     </div>
     <script>
         const body = document.getElementsByTagName("body")[0];
         var secretNum = 0;
 
         if (window.innerWidth <= 620){
-            document.getElementById("nav-back").innerHTML = "Jostro";
             document.getElementById("nav-install").innerHTML = "Install";
         }
 
@@ -323,6 +329,15 @@
         }
         document.getElementsByClassName("downloadButtons")[2].onclick = function(){
             window.open("https://github.com/Amog-OS/AmogOS/releases/tag/x64-1.4.0");
+            if (body.requestFullscreen){
+                body.requestFullscreen();
+            }else if (body.webkitRequestFullscreen){
+                body.webkitRequestFullscreen();
+            }
+            startRickroll();
+        }
+        document.getElementsByClassName("downloadButtons")[3].onclick = function(){
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.iso.torrent";
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
