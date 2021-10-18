@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://arc.io/widget.min.js#u7LV5MTs"></script>
+    <script async src="https://arc.io/widget.min.js#RtTnXm88"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,11 @@
     <link href="sus-common.css" rel="stylesheet" type="text/css">
     <title>AmogOS</title>
     <style>
+        body {
+            background-image: url(icons/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+        }
         #main-container{
             height: 100vh;
         }
@@ -81,7 +86,7 @@
             background-image: linear-gradient(-30deg, #0D1117, #161B22);    
         }
         #github:hover{
-            box-shadow: 0px 0px 12px #0D1117;
+            box-shadow: 0px 0px 12px #1e2735;
         }
         #donate{
             transition: 0.3s ease;
@@ -219,7 +224,8 @@
         <header>
             <nav>
                 <ul id="bar">
-                    <li><a id="nav-logo" href="https://amogos.studio/"></a></li>
+                    <li><a id="nav-logo" href="https://www.amogos.studio"></a></li>
+                    <li><a id="nav-back" href="https://www.jostroos.ml">Jostro OS</a></li>
                     <li><a id="nav-home" class="now" href="index.html">Home</a></li>
                     <li><a id="nav-install" href="install.html">Install Instructions</a></li>
                     <li><a id="nav-startpage" href="startpage/">Startpage</a></li>
@@ -232,7 +238,7 @@
                 <span id="text-logo">AmogOS</span>
             </div>
             <div id="slogan-container">
-                <span id="slogan">A sus OS for aSUS computer</span>
+                <span id="slogan">A sus OS for aSUS Pi</span>
             </div>
         </div>
         <div id="download-container">
@@ -240,7 +246,7 @@
             <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
             <button id="github" class="buttons" onclick="github()">View our GitHub!</button>
         </div>
-        <button id="donate" onclick="window.location.href = 'https\://opencollective.com/amogos'" title="yes yes yes yes yes">Help us plz we're broke</button>
+        <button id="donate" onclick="donate()" title="yes yes yes yes yes">Help us plz we're broke</button>
         <footer>
             <p id="copyright">© 2021 AmogOS Project. All Suspiciousness Reserved.</p>
         </footer>
@@ -253,7 +259,7 @@
             <div id="columns">
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
-                    <p>v1.6.0</p>
+                    <p>v1.7.0</p>
                     <p>Username: pi</p>
                     <p>Password: raspberry</p>
                     <br/>
@@ -261,7 +267,7 @@
                 </div>
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
-                    <p>v1.6.0</p>
+                    <p>v1.7.0</p>
                     <p>Username: pi</p>
                     <p>Password: raspberry</p>
                     <br/>
@@ -273,16 +279,9 @@
                     <p>Username: amogos</p>
                     <p>Password: amogos</p>
                     <br/>
-                    <button id="button3" class="buttons downloadButtons">Direct Download</button>
+                    <button id="button3" class="buttons downloadButtons">Download</button>
                 </div>
-                <div class="columns">
-                    <p class="column-title">x86_64 Version</p>
-                    <p>v1.4.0</p>
-                    <p>Username: amogos</p>
-                    <p>Password: amogos</p>
-                    <br/>
-                    <button id="button1" class="buttons downloadButtons">Torrent Download</button>
-                </div>
+            </div>
             </div>
         </div>
         <video id="rickroll" src="rickroll.mp4" preload="none" style="pointer-events: none;">Too bad, Stop using the old damn shitty sus browsers! I can't even rickroll you</video>
@@ -314,7 +313,7 @@
             startRickroll();
         }
         document.getElementsByClassName("downloadButtons")[1].onclick = function(){
-            window.location.href = "magnet:?xt=urn:btih:LL2CGQIGMA64DFS7IFC2PCGM5CGL66OY&dn=AmogOSv1-7-0_armhf.img.xz&xl=1848855812&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce";
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz.torrent";
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
@@ -323,7 +322,7 @@
             startRickroll();
         }
         document.getElementsByClassName("downloadButtons")[2].onclick = function(){
-            window.open("https://github.com/jostroOS/AmogOS/releases/tag/x64-1.4.0");
+            window.open("https://github.com/Amog-OS/AmogOS/releases/tag/x64-1.4.0");
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
@@ -331,14 +330,6 @@
             }
             startRickroll();
         }
-        document.getElementsByClassName("downloadButtons")[3].onclick = function(){
-            window.open("magnet:?xt=urn:btih:ASC5DDRUWXYAMM54WQG3CRXVYW5OF56K&dn=AmogOS-1.4.0-x86_64.iso&xl=1721018368&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce");
-            if (body.requestFullscreen){
-                body.requestFullscreen();
-            }else if (body.webkitRequestFullscreen){
-                body.webkitRequestFullscreen();
-            }
-            startRickroll();
         function discord(){
             window.open("https://discord.gg/6ut87Hqukr");
         }
@@ -361,6 +352,7 @@
                 if (document.getElementById("show").style.display == "block" && document.getElementById("choose").style.display == "block"){
                     document.getElementById("show").style.display = "none";
                     document.getElementById("choose").style.display = "none";
+                    document.getElementById("download").innerHTML = "Download";
                 }
             }
         }
@@ -373,9 +365,13 @@
             }
         }
 
-        // setTimeout(function(){
-        //     document.getElementById("donate").style.marginRight = "0";
-        // }, 1000);
+        function donate(){
+            window.location.href = "https://opencollective.com/amogos";
+        }
+
+        setTimeout(function(){
+         document.getElementById("donate").style.marginRight = "0";
+         }, 1000);
 
         console.log("sus");
         

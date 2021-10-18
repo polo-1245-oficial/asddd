@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="jostro,jostros,jostroos,twister">
     <meta name="theme-color" content="#b6359c">
-    <link rel="shortcut icon" href="icons/sus.ico" sizes="48x48">
-    <link rel="bookmark" href="icons/sus.ico">
-    <title>404 - AmogOS</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" sizes="48x48">
+    <link rel="bookmark" href="icons/favicon.ico">
+    <title>404</title>
     <style>
         body{
             margin: 0;
@@ -16,6 +16,7 @@
             height: 100%;
             background-color: #202225;
             overflow: hidden;
+            transition: background-color .5s;
         }
         p{
             width: 150%;
@@ -43,16 +44,18 @@
 </head>
 <body>
     <span id="warning">Back to home page in 5...</span>
-    <p id="main">404 404 404 404 404 404 404 404 404 404 404 404 404 404 040 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 040 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404</p>
+    <p id="main">You were trying to do something sus..</p>
+    <p>sus</p>
     <script>
         var countdown = 5;
         setInterval(function(){
             countdown -= 1;
             document.getElementById("warning").innerHTML = "Back to home page in " + countdown + "...";
             if (countdown == 0){
-                window.location.href = "https://amogos.studio/";
+                window.location.href = "https://www.amogos.studio";
             }
         }, 1000);
+        
     </script>
 </body>
 </html>

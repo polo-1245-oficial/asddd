@@ -30,11 +30,11 @@ span{
     font-style: italic;
 }
 #text-area a{
-    color: #ef0a6a;
+    color: #669999;
     font-weight: 600;
 }
 #text-area a:hover{
-    color: #b6359c;
+    color: #66ddcc;
 }
 @media screen and (max-width: 620px) {
     #text-area{
