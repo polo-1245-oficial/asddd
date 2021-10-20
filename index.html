@@ -115,6 +115,9 @@
             header, #copyright{
                 background-color: transparent;
             }
+            body {
+                background-image: none;
+            }
         }
         @media screen and (max-width: 620px) {
             #logo-container{
@@ -146,9 +149,9 @@
         #choose{
             display: none;
             position: absolute;
-            left: 25vw;
+            left: 15vw;
             top: calc(50vh - 35vw/2);
-            width: 50vw;
+            width: 70vw;
             height: 35vw;
             padding: 50px;
             box-sizing: border-box;
@@ -259,32 +262,28 @@
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
                     <p>v1.7.0</p>
-                    <p>Username: pi</p>
-                    <p>Password: raspberry</p>
+                    <img src="icons/downloadicons/RPI_direct.png" alt="sus" width="70px">
                     <br/>
                     <button id="button1" class="buttons downloadButtons">Direct Download</button>
                 </div>
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
                     <p>v1.7.0</p>
-                    <p>Username: pi</p>
-                    <p>Password: raspberry</p>
+                    <img src="icons/downloadicons/RPI_torrent.png" alt="sus" width="70px">
                     <br/>
                     <button id="button2" class="buttons downloadButtons">Magnet Link</button>
                 </div>
                 <div class="columns">
                     <p class="column-title">x86_64 Version</p>
                     <p>v1.4.0</p>
-                    <p>Username: amogos</p>
-                    <p>Password: amogos</p>
+                    <img src="icons/downloadicons/x64_direct.png" alt="sus" width="70px">
                     <br/>
-                    <button id="button3" class="buttons downloadButtons">Release page</button>
+                    <button id="button3" class="buttons downloadButtons">Direct Download</button>
                 </div>
                 <div class="columns">
                     <p class="column-title">x86_64 Version</p>
                     <p>v1.4.0</p>
-                    <p>Username: amogos</p>
-                    <p>Password: amogos</p>
+                    <img src="icons/downloadicons/x64_torrent.png" alt="sus" width="70px">
                     <br/>
                     <button id="button4" class="buttons downloadButtons">Magnet Link</button>
                 </div>
@@ -328,7 +327,7 @@
             startRickroll();
         }
         document.getElementsByClassName("downloadButtons")[2].onclick = function(){
-            window.open("https://github.com/Amog-OS/AmogOS/releases/tag/x64-1.4.0");
+            window.open("https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.iso");
             if (body.requestFullscreen){
                 body.requestFullscreen();
             }else if (body.webkitRequestFullscreen){
@@ -375,8 +374,13 @@
         document.getElementById("text-logo").onclick = function(){
             secretNum += 1;
             if (secretNum == 10){
-                document.getElementById("slogan").innerHTML = "Among Us Sussy Baka.";
-                alert("That's sus.");
+                document.getElementById("slogan").innerHTML = "SUSSY";
+                document.getElementById("text-logo").innerHTML = "SUS";
+                alert("susssy");
+                document.body.style.backgroundImage = "url(icons/fongzoi.png)";
+                setTimeout(function(){
+                    startRickroll();
+         }, 1000);
             }
         }
 
