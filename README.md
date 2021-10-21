@@ -1,6 +1,6 @@
-# Official website for AmogOS
+# Official Website for AmogOS
 
-Website made by 疯子鸭#5218!
-(powered by Moon1789)
+Made by Fengzi (Discord: 疯子鸭#5218)! 
+(POWERRRR by Moon1789)
 
-Website link: https://amogos.studio
+Website link: https://amogos.studio/

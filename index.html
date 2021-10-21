@@ -1,3 +1,4 @@
+<!--haccing skills #1: view page source-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,22 +6,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A sus OS for aSUS Pi.">
+    <meta name="description" content="A sus OS for aSUS computers.">
     <meta name="keywords" content="amogos,amog os,amongos,amogus,among us">
     <meta name="theme-color" content="#66ddcc">
     <meta property="og:site_name" content="AmogOS">
     <meta name="og:title" content="AmogOS | Home">
-    <meta name="og:description" content="A sus OS for aSUS Pi.">
-    <meta name="og:image" itemprop="image" content="icons/sus.png">
+    <meta name="og:description" content="A sus OS for aSUS computers.">
+    <meta name="og:image" itemprop="image" content="https://amogos.studio/icons/sus.png">
     <link rel="shortcut icon" href="icons/sus.ico" sizes="32x32">
     <link rel="bookmark" href="icons/sus.ico">
-    <link href="sus-common.css" rel="stylesheet" type="text/css">
-    <title>AmogOS</title>
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <title>AmogOS | Sussy wussy.</title>
     <style>
-        body {
-            background-image: url(icons/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         #main-container{
             height: 100vh;
@@ -70,7 +70,6 @@
             cursor: pointer;
         }
         #download{
-            /* background-image: linear-gradient(-30deg, #607D77, #7A9993); */
             background-image: linear-gradient(-30deg, #669999, #66ddcc);
         }
         #download:hover{
@@ -108,26 +107,6 @@
         #donate:hover{
             box-shadow: 0px 0px 9px #8FC7FF;
         }
-        @media screen and (max-width: 850px) {
-            #logo-container{
-                padding-top: calc(36vh - 60px);
-            }
-            header, #copyright{
-                background-color: transparent;
-            }
-            body {
-                background-image: none;
-            }
-        }
-        @media screen and (max-width: 620px) {
-            #logo-container{
-                padding-top: calc(26vh - 60px);
-            }
-            #slogan{
-                font-size: 18px;
-                line-height: 24px;
-            }
-        }
         #show{
             display: none;
             position: fixed;
@@ -149,9 +128,9 @@
         #choose{
             display: none;
             position: absolute;
-            left: 15vw;
+            left: 25vw;
             top: calc(50vh - 35vw/2);
-            width: 70vw;
+            width: 50vw;
             height: 35vw;
             padding: 50px;
             box-sizing: border-box;
@@ -164,19 +143,18 @@
             overflow: scroll;
         }
         #columns{
-            position: absolute;
-            left: 0vw;
-            bottom: 30px;
             display: flex;
             width: 100%;
             flex-direction: row;
-            justify-content: center;
-            align-items: flex-end;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
         .column-title{
+            margin-top: 48px;
             font-size: 18px;
         }
         .downloadButtons{
+            display: block;
             background-color: #000000;
         }
         .downloadButtons:hover{
@@ -192,17 +170,16 @@
             border: 5px solid #66ddcc;
             z-index: 69;
         }
-        @media screen and (max-width: 1300px) {
-            #columns{
-                flex-direction: column;
-                align-items: center;
-                position: initial;
-            }
-            .column-title{
-                margin-top: 30px;
-            }
-        }
         @media screen and (max-width: 850px) {
+            #logo-container{
+                padding-top: calc(36vh - 60px);
+            }
+            header, #copyright{
+                background-color: transparent;
+            }
+            body{
+                background-image: none;
+            }
             #choose{
                 left: 20vw;
                 width: 60vw;
@@ -212,6 +189,13 @@
             }
         }
         @media screen and (max-width: 620px) {
+            #logo-container{
+                padding-top: calc(26vh - 60px);
+            }
+            #slogan{
+                font-size: 18px;
+                line-height: 24px;
+            }
             #choose{
                 left: 10vw;
                 width: 80vw;
@@ -240,7 +224,7 @@
                 <span id="text-logo">AmogOS</span>
             </div>
             <div id="slogan-container">
-                <span id="slogan">A sus OS for aSUS computer</span>
+                <span id="slogan">A sus OS for aSUS computers</span>
             </div>
         </div>
         <div id="download-container">
@@ -248,7 +232,7 @@
             <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
             <button id="github" class="buttons" onclick="github()">View our GitHub!</button>
         </div>
-        <button id="donate" onclick="donate()" title="yes yes yes yes yes">Help us plz we're broke</button>
+        <button id="donate" onclick="donate()" title="yes yes yes yes yes">Help us plz we're in debt</button>
         <footer>
             <p id="copyright">© 2021 AmogOS Project. All Suspiciousness Reserved.</p>
         </footer>
@@ -256,35 +240,27 @@
     <div id="show">
         <div id="shade"></div>
         <div id="choose">
-            <p style="font-size: 36px">Choose your version.</p>
-            <p style="margin-top: 30px">Warning: By downloading AmogOS, you have severely increased the chance of being infected by the deadly AMOGID-16 virus. <a href="https://www.youtube.com/watch?v=nFstpT_YTro"  target="_blank" rel="noopener noreferrer">Find out how to recover from it.</a></p>
+            <p style="font-size: 36px; margin-top: 24px;">Choose your version.</p>
+            <p style="margin-top: 36px">Warning: By downloading AmogOS, you have severely increased the chance of being infected by the deadly AMOGID-16 virus. <a href="https://www.youtube.com/watch?v=nFstpT_YTro"  target="_blank" rel="noopener noreferrer">Find out how to recover from it.</a></p>
             <div id="columns">
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
                     <p>v1.7.0</p>
-                    <img src="icons/downloadicons/RPI_direct.png" alt="sus" width="70px">
+                    <img src="icons/download/RPI_direct.png" alt="Sussy" width="135px">
+                    <p>Username: pi</p>
+                    <p>Password: raspberry</p>
                     <br/>
                     <button id="button1" class="buttons downloadButtons">Direct Download</button>
-                </div>
-                <div class="columns">
-                    <p class="column-title">RPi Version</p>
-                    <p>v1.7.0</p>
-                    <img src="icons/downloadicons/RPI_torrent.png" alt="sus" width="70px">
-                    <br/>
                     <button id="button2" class="buttons downloadButtons">Magnet Link</button>
                 </div>
                 <div class="columns">
                     <p class="column-title">x86_64 Version</p>
                     <p>v1.4.0</p>
-                    <img src="icons/downloadicons/x64_direct.png" alt="sus" width="70px">
+                    <img src="icons/download/x64_direct.png" alt="Baka" width="135px">
+                    <p>Username: amogos</p>
+                    <p>Password: amogos</p>
                     <br/>
                     <button id="button3" class="buttons downloadButtons">Direct Download</button>
-                </div>
-                <div class="columns">
-                    <p class="column-title">x86_64 Version</p>
-                    <p>v1.4.0</p>
-                    <img src="icons/downloadicons/x64_torrent.png" alt="sus" width="70px">
-                    <br/>
                     <button id="button4" class="buttons downloadButtons">Magnet Link</button>
                 </div>
             </div>
@@ -293,13 +269,11 @@
         <video id="rickroll" src="rickroll.mp4" preload="none" style="pointer-events: none;">Too bad, Stop using the old sussy browsers! I can't even rickroll you :p</video>
     </div>
     <script>
-        const body = document.getElementsByTagName("body")[0];
         var secretNum = 0;
 
         if (window.innerWidth <= 620){
             document.getElementById("nav-install").innerHTML = "Install";
         }
-
         document.getElementById("download").innerHTML = "Download";
 
         function download(){
@@ -308,39 +282,39 @@
             document.getElementById("choose").style.display = "block";
             document.getElementById("rickroll").load();
         }
-        document.getElementsByClassName("downloadButtons")[0].onclick = function(){
+        document.getElementById("button1").onclick = function(){
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz";
-            if (body.requestFullscreen){
-                body.requestFullscreen();
-            }else if (body.webkitRequestFullscreen){
-                body.webkitRequestFullscreen();
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
             }
             startRickroll();
         }
-        document.getElementsByClassName("downloadButtons")[1].onclick = function(){
-            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz.torrent";
-            if (body.requestFullscreen){
-                body.requestFullscreen();
-            }else if (body.webkitRequestFullscreen){
-                body.webkitRequestFullscreen();
+        document.getElementById("button2").onclick = function(){
+            window.location.href = "magnet:?xt=urn:btih:LL2CGQIGMA64DFS7IFC2PCGM5CGL66OY&dn=AmogOSv1-7-0_armhf.img.xz&xl=1848855812&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
             }
             startRickroll();
         }
-        document.getElementsByClassName("downloadButtons")[2].onclick = function(){
-            window.open("https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.iso");
-            if (body.requestFullscreen){
-                body.requestFullscreen();
-            }else if (body.webkitRequestFullscreen){
-                body.webkitRequestFullscreen();
+        document.getElementById("button3").onclick = function(){
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.iso";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
             }
             startRickroll();
         }
-        document.getElementsByClassName("downloadButtons")[3].onclick = function(){
-            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.iso.torrent";
-            if (body.requestFullscreen){
-                body.requestFullscreen();
-            }else if (body.webkitRequestFullscreen){
-                body.webkitRequestFullscreen();
+        document.getElementById("button4").onclick = function(){
+            window.location.href = "magnet:?xt=urn:btih:ASC5DDRUWXYAMM54WQG3CRXVYW5OF56K&dn=AmogOS-1.4.0-x86_64.iso&xl=1721018368&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
             }
             startRickroll();
         }
@@ -350,6 +324,14 @@
         function github(){
             window.open("https://github.com/Amog-OS");
         }
+        function donate(){
+            window.location.href = "https://opencollective.com/amogos";
+        }
+
+        setTimeout(function(){
+            document.getElementById("donate").style.marginRight = "0";
+        }, 1000);
+
         function startRickroll(){
             document.getElementById("choose").style.display = "none";
             document.getElementById("rickroll").style.display = "block";
@@ -371,29 +353,25 @@
             }
         }
 
+        window.onload = function(){
+            // document.body.style.backgroundImage = "url('icons/bg.png')";
+        }
+
         document.getElementById("text-logo").onclick = function(){
             secretNum += 1;
             if (secretNum == 10){
                 document.getElementById("slogan").innerHTML = "SUSSY";
-                document.getElementById("text-logo").innerHTML = "SUS";
-                alert("susssy");
+                document.getElementById("text-logo").innerHTML = "Sussy Baka";
                 document.body.style.backgroundImage = "url(icons/fongzoi.png)";
+                document.getElementById("rickroll").load();
                 setTimeout(function(){
                     startRickroll();
-         }, 1000);
+                }, 4200.69);
             }
         }
 
-        function donate(){
-            window.location.href = "https://opencollective.com/amogos";
-        }
-
-        setTimeout(function(){
-         document.getElementById("donate").style.marginRight = "0";
-         }, 1000);
-
+        console.log("3yr old haccing skills #2: inspect elements and console")
         console.log("sus");
-        
         //#607D77 #7A9992
     </script>
 </body>
