@@ -238,7 +238,7 @@
         </footer>
     </div>
     <div id="show">
-        <div id="shade"></div>
+        <div id="shade" onclick="shade()" ></div>
         <div id="choose">
             <p style="font-size: 36px; margin-top: 24px;">Choose your version.</p>
             <p style="margin-top: 36px">Warning: By downloading AmogOS, you have severely increased the chance of being infected by the deadly AMOGID-16 virus. <a href="https://www.youtube.com/watch?v=nFstpT_YTro"  target="_blank" rel="noopener noreferrer">Find out how to recover from it.</a></p>
@@ -350,6 +350,14 @@
                     document.getElementById("choose").style.display = "none";
                     document.getElementById("download").innerHTML = "Download";
                 }
+            }
+        }
+
+        function shade() {
+            if (document.getElementById("show").style.display == "block" && document.getElementById("choose").style.display == "block"){
+                    document.getElementById("show").style.display = "none";
+                    document.getElementById("choose").style.display = "none";
+                    document.getElementById("download").innerHTML = "Download";
             }
         }
 
