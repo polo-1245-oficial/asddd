@@ -6,35 +6,28 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://www.amogos.studio/</loc>
+  <loc>https://amogos.studio/</loc>
   <lastmod>2021-10-25T00:37:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.amogos.studio/index.html</loc>
-  <lastmod>2021-10-25T00:37:57+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.amogos.studio/install.html</loc>
+  <loc>https://amogos.studio/install</loc>
   <lastmod>2021-10-25T00:37:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.amogos.studio/startpage/</loc>
+  <loc>https://amogos.studio/startpage/</loc>
   <lastmod>2021-10-25T00:37:57+00:00</lastmod>
   <changefreq>never</changefreq>
   <priority>0.20</priority>
 </url>
 <url>
-  <loc>https://www.amogos.studio/about.html</loc>
+  <loc>https://amogos.studio/about</loc>
   <lastmod>2021-10-25T00:37:57+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0</priority>
 </url>
-
 
 </urlset>
