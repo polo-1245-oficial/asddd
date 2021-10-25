@@ -1,4 +1,5 @@
-https://amogos.studio/
-https://amogos.studio/install
-https://amogos.studio/about
-https://amogos.studio/startpage
+https://www.amogos.studio/
+https://www.amogos.studio/index.html
+https://amogos.studio/install.html
+https://amogos.studio/about.html
+https://amogos.studio/startpage/index.html
