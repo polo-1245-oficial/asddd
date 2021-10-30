@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="AmogOS">
     <meta name="og:title" content="AmogOS | Home">
     <meta name="og:description" content="A sus OS for aSUS computers.">
-    <meta name="og:image" itemprop="image" content="https://amogos.studio/icons/webp/sus.webp">
+    <meta name="og:image" itemprop="image" content="https://amogos.studio/icons/sus.png">
     <link rel="shortcut icon" href="icons/sus.ico" sizes="32x32">
     <link rel="bookmark" href="icons/sus.ico">
     <link href="common.css" rel="stylesheet" type="text/css">
@@ -246,7 +246,7 @@
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
                     <p>v1.7.0</p>
-                    <img src="icons/webp/RPI_direct.webp" alt="Sussy" width="135px">
+                    <img src="icons/RPI_direct.png" alt="RPI version Sussy" width="135px">
                     <p>Username: pi</p>
                     <p>Password: raspberry</p>
                     <br/>
@@ -256,7 +256,7 @@
                 <div class="columns">
                     <p class="column-title">x86_64 Version</p>
                     <p>v1.4.0</p>
-                    <img src="icons/webp/x64_direct.webp" alt="Baka" width="135px">
+                    <img src="icons/x64_direct.png" alt="x64 version Baka" width="135px">
                     <p>Username: amogos</p>
                     <p>Password: amogos</p>
                     <br/>
@@ -361,9 +361,10 @@
             }
         }
 
-        window.onload = function(){
-            document.body.style.backgroundImage = "url('icons/webp/bg.webp')";
-        }
+        // Code to show a background banner, disabled since takes too long to load
+        //window.onload = function(){
+        //    document.body.style.backgroundImage = "url('icons/webp/bg.webp')";
+        //}
 
         document.getElementById("text-logo").onclick = function(){
             secretNum += 1;
