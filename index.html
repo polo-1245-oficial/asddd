@@ -244,24 +244,26 @@
             <p style="margin-top: 36px">Warning: By downloading AmogOS, you have severely increased the chance of being infected by the deadly AMOGID-16 virus. <a href="https://www.youtube.com/watch?v=nFstpT_YTro"  target="_blank" rel="noopener noreferrer">Find out how to recover from it.</a></p>
             <div id="columns">
                 <div class="columns">
-                    <p class="column-title">RPi Version</p>
-                    <p>v1.7.0</p>
-                    <img src="icons/download/RPI_direct.png" alt="RPI version Sussy" width="135px">
-                    <p>Username: pi</p>
-                    <p>Password: raspberry</p>
-                    <br/>
-                    <button id="button1" class="buttons downloadButtons">Direct Download</button>
-                    <button id="button2" class="buttons downloadButtons">Magnet Link</button>
-                </div>
-                <div class="columns">
                     <p class="column-title">x86_64 Version</p>
                     <p>v1.4.0</p>
                     <img src="icons/download/x64_direct.png" alt="x64 version Baka" width="135px">
                     <p>Username: amogos</p>
                     <p>Password: amogos</p>
                     <br/>
-                    <button id="button3" class="buttons downloadButtons">Direct Download</button>
-                    <button id="button4" class="buttons downloadButtons">Magnet Link</button>
+                    <button id="button1" class="buttons downloadButtons">Direct Download</button>
+                    <button id="button2" class="buttons downloadButtons">Mirror Download</button>
+                    <button id="button3" class="buttons downloadButtons">Torrent File</button>
+                </div>
+                <div class="columns">
+                    <p class="column-title">RPi Version</p>
+                    <p>v1.7.0</p>
+                    <img src="icons/download/RPI_direct.png" alt="RPI version Sussy" width="135px">
+                    <p>Username: pi</p>
+                    <p>Password: raspberry</p>
+                    <br/>
+                    <button id="button4" class="buttons downloadButtons">Direct Download</button>
+                    <button id="button5" class="buttons downloadButtons">Mirror Download</button>
+                    <button id="button6" class="buttons downloadButtons">Torrent File</button>
                 </div>
             </div>
             </div>
@@ -282,25 +284,8 @@
             document.getElementById("choose").style.display = "block";
             document.getElementById("rickroll").load();
         }
+        // x64 direct download
         document.getElementById("button1").onclick = function(){
-            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz";
-            if (document.body.requestFullscreen){
-                document.body.requestFullscreen();
-            }else if (document.body.webkitRequestFullscreen){
-                document.body.webkitRequestFullscreen();
-            }
-            startRickroll();
-        }
-        document.getElementById("button2").onclick = function(){
-            window.location.href = "magnet:?xt=urn:btih:LL2CGQIGMA64DFS7IFC2PCGM5CGL66OY&dn=AmogOSv1-7-0_armhf.img.xz&xl=1848855812&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce";
-            if (document.body.requestFullscreen){
-                document.body.requestFullscreen();
-            }else if (document.body.webkitRequestFullscreen){
-                document.body.webkitRequestFullscreen();
-            }
-            startRickroll();
-        }
-        document.getElementById("button3").onclick = function(){
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.iso";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -309,8 +294,49 @@
             }
             startRickroll();
         }
+        // x64 mirror download
+        document.getElementById("button2").onclick = function(){
+            window.location.href = "https://archive.org/download/amogos-x64/AmogOS-1.4.0-x86_64.iso";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
+            }
+            startRickroll();
+        }
+        // x64 torrent download
+        document.getElementById("button3").onclick = function(){
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.torrent";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
+            }
+            startRickroll();
+        }
+        // rpi direct download
         document.getElementById("button4").onclick = function(){
-            window.location.href = "magnet:?xt=urn:btih:ASC5DDRUWXYAMM54WQG3CRXVYW5OF56K&dn=AmogOS-1.4.0-x86_64.iso&xl=1721018368&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce";
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
+            }
+            startRickroll();
+        }
+        // rpi mirror download
+        document.getElementById("button5").onclick = function(){
+            window.location.href = "https://archive.org/download/amogos-rpi-armhf/AmogOSv1-7-0_armhf.img.xz";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
+            }
+            startRickroll();
+        }
+        // rpi torrent download
+        document.getElementById("button6").onclick = function(){
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.torrent";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
             }else if (document.body.webkitRequestFullscreen){
@@ -361,10 +387,9 @@
             }
         }
 
-        // Code to show a background banner, disabled since takes too long to load
-        //window.onload = function(){
-        //    document.body.style.backgroundImage = "url('icons/webp/bg.webp')";
-        //}
+        window.onload = function(){
+            document.body.style.backgroundImage = "url('icons/webp/bg.webp')";
+        }
 
         document.getElementById("text-logo").onclick = function(){
             secretNum += 1;
