@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="AmogOS">
     <meta name="og:title" content="AmogOS | Home">
     <meta name="og:description" content="A sus OS for aSUS computers.">
-    <meta name="og:image" itemprop="image" content="https://amogos.studio/icons/sus.png">
+    <meta name="og:image" itemprop="image" content="https://amogos.studio/icons/sus-christmas.png">
     <link rel="shortcut icon" href="icons/sus.ico" sizes="32x32">
     <link rel="bookmark" href="icons/sus.ico">
     <link href="common.css" rel="stylesheet" type="text/css">
@@ -251,8 +251,9 @@
                     <p>Password: amogos</p>
                     <br/>
                     <button id="button1" class="buttons downloadButtons">Direct Download</button>
-                    <button id="button2" class="buttons downloadButtons">Mirror Download</button>
-                    <button id="button3" class="buttons downloadButtons">Torrent File</button>
+					<button id="button2" class="buttons downloadButtons">VM Image</button>
+                    <button id="button3" class="buttons downloadButtons">Mirror Download</button>
+                    <button id="button4" class="buttons downloadButtons">Torrent File</button>
                 </div>
                 <div class="columns">
                     <p class="column-title">RPi Version</p>
@@ -261,9 +262,9 @@
                     <p>Username: pi</p>
                     <p>Password: raspberry</p>
                     <br/>
-                    <button id="button4" class="buttons downloadButtons">Direct Download</button>
-                    <button id="button5" class="buttons downloadButtons">Mirror Download</button>
-                    <button id="button6" class="buttons downloadButtons">Torrent File</button>
+                    <button id="button5" class="buttons downloadButtons">Direct Download</button>
+                    <button id="button6" class="buttons downloadButtons">Mirror Download</button>
+                    <button id="button7" class="buttons downloadButtons">Torrent File</button>
                 </div>
             </div>
             </div>
@@ -284,9 +285,10 @@
             document.getElementById("choose").style.display = "block";
             document.getElementById("rickroll").load();
         }
+		
         // x64 direct download
         document.getElementById("button1").onclick = function(){
- alert('⚠️ | When flashing the OS, PLEASE only use Universal USB imager! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info | ⚠️');      
+ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info. Please also use the "VM image" download if you are planning to run the OS in VirturalBox/VMWare! | ⚠️');      
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.iso";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -295,9 +297,21 @@
             }
             startRickroll();
         }
-        // x64 mirror download
+		
+		// x64 vm download
         document.getElementById("button2").onclick = function(){
-    alert('⚠️ | When flashing the OS, PLEASE only use Universal USB imager! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info | ⚠️');      
+            window.location.href = "https://drive.google.com/file/d/195dFrFehCxefzy1JbYFO6MzIC90QegFT/view?usp=sharing";
+            if (document.body.requestFullscreen){
+                document.body.requestFullscreen();
+            }else if (document.body.webkitRequestFullscreen){
+                document.body.webkitRequestFullscreen();
+            }
+            startRickroll();
+        }
+		
+        // x64 mirror download
+        document.getElementById("button3").onclick = function(){
+alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info | ⚠️');      
          window.location.href = "http://link.us1.storjshare.io/s/jwpox43hdrzljghqanc4m7xwhrga/amogos/AmogOS-1.4.0-x86_64.iso?download";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -306,10 +320,10 @@
             }
             startRickroll();
         }
+		
         // x64 torrent download
-
-        document.getElementById("button3").onclick = function(){
- alert('⚠️ | When flashing the OS, PLEASE only use Universal USB imager! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info | ⚠️');
+        document.getElementById("button4").onclick = function(){
+ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info | ⚠️');
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.torrent";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -318,6 +332,7 @@
             }
             startRickroll();
         }
+		
         // rpi direct download
         document.getElementById("button4").onclick = function(){
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz";
@@ -328,6 +343,7 @@
             }
             startRickroll();
         }
+		
         // rpi mirror download
         document.getElementById("button5").onclick = function(){
             window.location.href = "https://link.us1.storjshare.io/s/jwx64l4grlrpl7g4tvw24cilztra/amogos/AmogOSv1-7-0_armhf.img.xz?download";
@@ -338,6 +354,7 @@
             }
             startRickroll();
         }
+		
         // rpi torrent download
         document.getElementById("button6").onclick = function(){
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.torrent";
@@ -352,7 +369,7 @@
             window.open("https://discord.gg/6ut87Hqukr");
         }
         function github(){
-            window.open("https://github.com/Amog-OS");
+            window.open("https://github.com/Amog-OS/AmogOS");
         }
         function donate(){
             window.location.href = "https://opencollective.com/amogos";
@@ -392,7 +409,7 @@
         }
 
         window.onload = function(){
-            document.body.style.backgroundImage = "url('icons/bg.jpg')";
+            document.body.style.backgroundImage = "url('icons/bg-720p-progressive-christmas.jpg')";
         }
 
         document.getElementById("text-logo").onclick = function(){
