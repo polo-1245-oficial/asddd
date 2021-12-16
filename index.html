@@ -252,7 +252,7 @@
                     <br/>
                     <button id="button1" class="buttons downloadButtons">Direct Download</button>
                     <button id="button2" class="buttons downloadButtons">VM Image</button>
-                    <button id="button3" class="buttons downloadButtons">Mirror Download</button>
+                    <button id="button3" class="buttons downloadButtons">Mirror Download (BROKEN)</button>
                     <button id="button4" class="buttons downloadButtons">Torrent File</button>
                 </div>
                 <div class="columns">
@@ -263,7 +263,7 @@
                     <p>Password: raspberry</p>
                     <br/>
                     <button id="button5" class="buttons downloadButtons">Direct Download</button>
-                    <!-- <button id="button6" class="buttons downloadButtons">Mirror Download</button> -->
+                    <button id="button6" class="buttons downloadButtons">Mirror Download (BROKEN)</button>
                     <button id="button7" class="buttons downloadButtons">Torrent File</button>
                 </div>
             </div>
@@ -311,7 +311,7 @@
 		
         // x64 mirror download
         document.getElementById("button3").onclick = function(){
-alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info | ⚠️');      
+ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info. Please also use the "VM image" download if you are planning to run the OS in VirturalBox/VMWare! | ⚠️');      
          window.location.href = "http://link.us1.storjshare.io/s/jwpox43hdrzljghqanc4m7xwhrga/amogos/AmogOS-1.4.0-x86_64.iso?download";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -323,7 +323,7 @@ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! R
 		
         // x64 torrent download
         document.getElementById("button4").onclick = function(){
- alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info | ⚠️');
+ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info. Please also use the "VM image" download if you are planning to run the OS in VirturalBox/VMWare! | ⚠️');
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.0/AmogOS-1.4.0-x86_64.torrent";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -345,7 +345,7 @@ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! R
         }
 		
         // rpi mirror download
-        document.getElementById("butto6").onclick = function(){
+        document.getElementById("button6").onclick = function(){
             window.location.href = "https://link.us1.storjshare.io/s/jwx64l4grlrpl7g4tvw24cilztra/amogos/AmogOSv1-7-0_armhf.img.xz?download";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -357,7 +357,7 @@ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! R
 
         // rpi torrent download
         document.getElementById("button7").onclick = function(){
-            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.torrent";
+            window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz.torrent";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
             }else if (document.body.webkitRequestFullscreen){
