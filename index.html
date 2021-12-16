@@ -263,7 +263,7 @@
                     <p>Password: raspberry</p>
                     <br/>
                     <button id="button5" class="buttons downloadButtons">Direct Download</button>
-                    <button id="button6" class="buttons downloadButtons">Mirror Download</button>
+                    <!-- <button id="button6" class="buttons downloadButtons">Mirror Download</button> -->
                     <button id="button7" class="buttons downloadButtons">Torrent File</button>
                 </div>
             </div>
@@ -334,7 +334,7 @@ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! R
         }
 		
         // rpi direct download
-        document.getElementById("button4").onclick = function(){
+        document.getElementById("button5").onclick = function(){
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.img.xz";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -345,7 +345,7 @@ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! R
         }
 		
         // rpi mirror download
-        document.getElementById("button5").onclick = function(){
+        document.getElementById("butto6").onclick = function(){
             window.location.href = "https://link.us1.storjshare.io/s/jwx64l4grlrpl7g4tvw24cilztra/amogos/AmogOSv1-7-0_armhf.img.xz?download";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
@@ -354,9 +354,9 @@ alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! R
             }
             startRickroll();
         }
-		
+
         // rpi torrent download
-        document.getElementById("button6").onclick = function(){
+        document.getElementById("button7").onclick = function(){
             window.location.href = "https://github.com/Amog-OS/AmogOS/releases/download/1.7.0/AmogOSv1-7-0_armhf.torrent";
             if (document.body.requestFullscreen){
                 document.body.requestFullscreen();
