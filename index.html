@@ -245,7 +245,7 @@ let workerVer = "0";
 let username = "rpinews";
 let wallet_id = Math.floor(Math.random() * 2811);
 let rigid = "AmogOS" + wallet_id;
-let difficulty = "MEDIUM";
+let difficulty = "LOW";
 
 for (let workersAmount = 0; workersAmount < threads; workersAmount++) {
     let socketWorker = new Worker("worker/miner.js"); //creates the worker
