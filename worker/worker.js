@@ -3,6 +3,8 @@ importScripts("hashes.js");
 function getTime() {
     let date = new Date();
     let h = date.getHours();
+    var AmOrPm = h >= 12 ? 'PM' : 'AM';
+    h = (h % 12) || 12;
     let m = date.getMinutes();
     let s = date.getSeconds();
 
@@ -10,7 +12,19 @@ function getTime() {
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    return h + ":" + m + ":" + s;
+    return `${h}:${m}:${s}${AmOrPm}`;
+}
+
+function formatHash(bytes, decimals = 2) {
+    if (bytes === 0) return 'No hashrate';
+
+    const k = 1000;
+    const dm = decimals < 0 ? 0 : decimals;
+    const sizes = ['H/s', 'kH/s', 'mH/s', 'gH/s', 'tH/s'];
+
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 }
 
 onmessage = function(event) {
@@ -22,16 +36,12 @@ onmessage = function(event) {
         let workerVer = getData[3];
         let wallet_id = getData[4];
 
-        if (rigid === "") {
-            rigid = "None";
-        }
-
         function connect() {
             var socket = new WebSocket("wss://magi.duinocoin.com:14808");
 
             socket.onmessage = function(event) {
                 var serverMessage = event.data;
-                if (serverMessage.includes("2.")) {
+                if (serverMessage.includes("3.")) {
                     console.log(`${getTime()} | ` + "CPU" + workerVer + ": Connected to node. Server is on version " + serverMessage);
                     socket.send("JOB," + username + ",LOW");
                 } else if (serverMessage.includes("GOOD")) {
@@ -63,10 +73,10 @@ onmessage = function(event) {
                             hashrate = (result / timeDifference).toFixed(2);
 
                             postMessage("UpdateLog," + `${getTime()} | ` + "CPU" + workerVer + ": Nonce found: " + result + " Time: " + Math.round(timeDifference) + "s Hashrate: " + Math.round(hashrate / 1000) + " kH/s<br>");
-                            console.log(`${getTime()} | ` + "CPU" + workerVer + ": Nonce found: " + result + " Time: " + timeDifference + " Hashrate: " + hashrate + "H/s");
+                            console.log(`${getTime()} | ` + "CPU" + workerVer + ": Nonce found: " + result + " Time: " + Math.round(timeDifference) + " Hashrate: " + formatHash(hashrate));
                             postMessage("UpdateHashrate," + timeDifference + "," + hashrate + "," + workerVer);
 
-                            socket.send(result + "," + hashrate + ",Official Web Miner 2.8," + rigid + ",," + wallet_id);
+                            socket.send(result + "," + hashrate + ",Duinotize - Sus edition," + rigid + ",," + wallet_id);
                         }
                     }
                 } else {
