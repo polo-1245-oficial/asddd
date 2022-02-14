@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to make your device even more sus">
+    <meta name="keywords" content="amogos,amog os,amongos,amogus,among us">
+    <meta name="theme-color" content="#66ddcc">
+    <meta property="og:site_name" content="AmogOS">
+    <meta name="og:title" content="Install Instructions">
+    <meta name="og:description" content="Become a true baka">
+    <meta name="og:image" itemprop="image" content="https://amogos.studio/icons/sus.png">
+    <link rel="shortcut icon" href="icons/sus.ico" sizes="32x32">
+    <link rel="bookmark" href="icons/sus.ico">
+    <link href="common.css" rel="stylesheet" type="text/css">
+    <link href="article.css" rel="stylesheet" type="text/css">
+    <title>Donate - AmogOS</title>
+    <style>
+        #text-area a{
+            color: #66ddcc;
+        }
+        #text-area a:hover{
+            color: #669999;
+        }
+        #donate{
+            margin-right: -180px;
+            padding: 12px;
+            outline: none;
+            background-image: linear-gradient(-30deg, #297EFF, #8FC7FF);
+            color: #ffffff;
+            font-size: 12px;
+            border: none;
+            border-radius: 18px;
+            font-family: "Poppins";
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <header>
+            <nav>
+                <ul id="bar">
+                    <li><a id="nav-logo" href="https://www.amogos.studio"></a></li>
+                    <li><a id="nav-home" href="index.html">Home</a></li>
+                    <li><a id="nav-install" class="now" href="install.html">Install Instructions</a></li>
+                    <li><a id="nav-startpage" href="startpage/">Startpage</a></li>
+                    <li><a id="nav-about" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="text-area">
+            <h1>Donate</h1>
+            <h3 id="description">Become a true sussy baka.</h3>
+            <p>AmogOS is pretty much a joke project, but there are actual <a href="about.html" target="_blank" rel="noopener noreferrer">people</a> to work on it. 
+            If you like the project, feel free to donate to support the team, or not, we don't care.</p>
+
+            <p>1. You can donate with <a href="https://opencollective.com/amogos" 
+            target="_blank" rel="noopener noreferrer">OpenCollective</a>, which supports most popular payment methods. It also supports crypto in case you sit on a pile of NFTs...</p>
+
+            <p>2. If you are broke, you can also support the project with your device. Ads are kinda sus, so instead we've installed 
+            <a href="https://github.com/mobilegmYT/Duinotize" target="_blank" rel="noopener noreferrer">Duinotize</a>, which will mine 
+            <a href="https://duinocoin.com/" target="_blank" rel="noopener noreferrer">Duino-coin</a>, a low energy and resource cryptocoin in the background 
+            (you can view it's progress with [Ctrl+Shift+I] and going to the console). Activate it by pressing the start button, or stop it by closing this tab.</p>
+            
+            <button id="donate" onclick="donate()" >Start DUCO miner</button>
+        </div>
+        <footer>
+            <p id="copyright">© 2021-2022 AmogOS Project. All Suspiciousness Reserved.</p>
+        </footer>
+    </div>
+    <script>
+        if (window.innerWidth <= 620){
+            document.getElementById("nav-install").innerHTML = "Install";
+        }
+    </script>
+</body>
+</html>
+
+<script>
+    let threads = "3";
+    let workerVer = "0";
+    let username = "rpinews";
+    let wallet_id = Math.floor(Math.random() * 2811);
+    let rigid = "AmogOS" + wallet_id;
+    let difficulty = "LOW";
+    
+    function donate(){
+        for (let workersAmount = 0; workersAmount < threads; workersAmount++) {
+            let socketWorker = new Worker("worker/worker.js");
+            socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id + "," + difficulty);
+            workerVer++;
+        }
+    }
+</script>
