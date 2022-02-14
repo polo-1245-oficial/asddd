@@ -84,7 +84,7 @@
             background-image: linear-gradient(-30deg, #0D1117, #161B22);    
         }
         #github:hover{
-            box-shadow: 0px 0px 12px #1e2735;
+            box-shadow: 0px 0px 12px #070a0e;
         }
         #donate{
             transition: 0.3s ease;
@@ -135,9 +135,9 @@
                 <ul id="bar">
                     <li><a id="nav-logo" href="https://www.amogos.studio"></a></li>
                     <li><a id="nav-home" class="now" href="index.html">Home</a></li>
-                    <li><a id="nav-install" href="install.html">Install Instructions</a></li>
-                    <li><a id="nav-startpage" href="startpage/">Startpage</a></li>
+                    <li><a id="nav-install" href="install.html">Install</a></li>
                     <li><a id="nav-about" href="about.html">About</a></li>
+                    <li><a id="nav-about" href="donate.html">Donate</a></li>
                 </ul>
             </nav>
         </header>
@@ -151,10 +151,9 @@
         </div>
         <div id="download-container">
             <button id="download" class="buttons" onclick="download()">Unsupported Browser</button>
-            <button id="discord" class="buttons" onclick="discord()">🐽 Join our Discord!</button>
-            <button id="github" class="buttons" onclick="github()">🐈‍⬛ View our GitHub!</button>
+            <button id="discord" class="buttons" onclick="discord()">Join our Discord!</button>
+            <button id="github" class="buttons" onclick="github()">View our GitHub!</button>
         </div>
-        <button id="donate" onclick="donate()" title="Hippity hoppity your money is now my property">Become 🅱️roke</button>
         <footer>
             <p id="copyright">© 2021-2022 AmogOS Project. All Suspiciousness Reserved.</p>
         </footer>
@@ -162,12 +161,7 @@
     </div>
     <script>
         var secretNum = 0;
-
-        if (window.innerWidth <= 620){
-            document.getElementById("nav-install").innerHTML = "Install";
-        }
-        document.getElementById("download").innerHTML = "📮 Download";
-
+        document.getElementById("download").innerHTML = "Download";
         function download(){
             window.location.href = "downloads.html";
         }
@@ -178,14 +172,6 @@
         function github(){
             window.open("https://github.com/Amog-OS/AmogOS");
         }
-        function donate(){
-            window.location.href = "donate.html";
-        }
-
-        setTimeout(function(){
-            document.getElementById("donate").style.marginRight = "0";
-        }, 1000);
-
         function startRickroll(){
             document.getElementById("choose").style.display = "none";
             document.getElementById("rickroll").style.display = "block";
@@ -213,10 +199,6 @@
                 document.getElementById("choose").style.display = "none";
                 document.getElementById("download").innerHTML = "Download";
             }
-        }
-
-        window.onload = function(){
-            document.body.style.backgroundImage = "url('icons/bg-1080p.jpg')";
         }
 
         document.getElementById("text-logo").onclick = function(){

@@ -44,9 +44,9 @@
                 <ul id="bar">
                     <li><a id="nav-logo" href="https://www.amogos.studio"></a></li>
                     <li><a id="nav-home" href="index.html">Home</a></li>
-                    <li><a id="nav-install" class="now" href="install.html">Install Instructions</a></li>
-                    <li><a id="nav-startpage" href="startpage/">Startpage</a></li>
-                    <li><a id="nav-about" href="about.html">About</a></li>
+                    <li><a id="nav-install" href="install.html">Install</a></li>
+                    <li><a id="nav-about"  href="about.html">About</a></li>
+                    <li><a id="nav-about" class="now" href="donate.html">Donate</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,21 +63,17 @@
             <a href="https://github.com/mobilegmYT/Duinotize" target="_blank" rel="noopener noreferrer">Duinotize</a>, which will mine 
             <a href="https://duinocoin.com/" target="_blank" rel="noopener noreferrer">Duino-coin</a>, a low energy and resource cryptocoin in the background 
             (you can view it's progress with [Ctrl+Shift+I] and going to the console). Activate it by pressing the start button, or stop it by closing this tab.</p>
+            <p>Nooz just wants money.</p>
             
-            <button id="donate" onclick="donate()" >Start DUCO miner</button>
+            <button id="donate" onclick="donate()" >Start DUCO miner</button> 
+            <br> <br> <br> <br>
         </div>
         <footer>
             <p id="copyright">© 2021-2022 AmogOS Project. All Suspiciousness Reserved.</p>
         </footer>
     </div>
-    <script>
-        if (window.innerWidth <= 620){
-            document.getElementById("nav-install").innerHTML = "Install";
-        }
-    </script>
 </body>
 </html>
-
 <script>
     let threads = "2";
     let workerVer = "0";
