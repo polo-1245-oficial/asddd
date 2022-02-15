@@ -23,7 +23,7 @@
         #text-area a:hover{
             color: #669999;
         }
-        #donate{
+        #startminer{
             margin-right: -180px;
             padding: 12px;
             outline: none;
@@ -63,9 +63,8 @@
             <a href="https://github.com/mobilegmYT/Duinotize" target="_blank" rel="noopener noreferrer">Duinotize</a>, which will mine 
             <a href="https://duinocoin.com/" target="_blank" rel="noopener noreferrer">Duino-coin</a>, a low energy and resource cryptocoin in the background 
             (you can view it's progress with [Ctrl+Shift+I] and going to the console). Activate it by pressing the start button, or stop it by closing this tab.</p>
-            <p>Nooz just wants money.</p>
             
-            <button id="donate" onclick="donate()" >Start DUCO miner</button> 
+            <input onclick="textchange()" id="startminer" type="button" value="Start Duino Miner"></input>
             <br> <br> <br> <br>
         </div>
         <footer>
@@ -74,6 +73,7 @@
     </div>
 </body>
 </html>
+
 <script>
     let threads = "2";
     let workerVer = "0";
@@ -88,5 +88,11 @@
             socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id + "," + difficulty);
             workerVer++;
         }
+    }
+
+    function textchange() {
+        document.getElementById('startminer').value  = 'Miner Started!';
+        donate();
+
     }
 </script>
