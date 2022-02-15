@@ -133,7 +133,7 @@
         <header>
             <nav>
                 <ul id="bar">
-                    <li><a id="nav-logo" href="https://www.amogos.studio"></a></li>
+                    <li><a id="nav-logo" href="https://amogos.studio"></a></li>
                     <li><a id="nav-home" class="now" href="index.html">Home</a></li>
                     <li><a id="nav-install" href="install.html">Install</a></li>
                     <li><a id="nav-about" href="about.html">About</a></li>
@@ -160,67 +160,34 @@
     </div>
     </div>
     <script>
-        var secretNum = 0;
         document.getElementById("download").innerHTML = "Download";
+        
         function download(){
             window.location.href = "downloads.html";
         }
-        
         function discord(){
             window.open("https://discord.gg/6ut87Hqukr");
         }
         function github(){
             window.open("https://github.com/Amog-OS/AmogOS");
         }
-        function startRickroll(){
-            document.getElementById("choose").style.display = "none";
-            document.getElementById("rickroll").style.display = "block";
-            document.getElementById("rickroll").play();
-            setTimeout(function(){
-                document.getElementById("show").onclick = function(){
-                    document.getElementById("copyright").innerHTML = "You have no control over this situation.";
-                }
-            }, 100);
-        }
-
-        document.onkeydown = function(event){
-            if (event.keyCode == 27){
-                if (document.getElementById("show").style.display == "block" && document.getElementById("choose").style.display == "block"){
-                    document.getElementById("show").style.display = "none";
-                    document.getElementById("choose").style.display = "none";
-                    document.getElementById("download").innerHTML = "Download";
-                }
-            }
-        }
-
-        function escape() {
-            if (document.getElementById("show").style.display == "block" && document.getElementById("choose").style.display == "block"){
-                document.getElementById("show").style.display = "none";
-                document.getElementById("choose").style.display = "none";
-                document.getElementById("download").innerHTML = "Download";
-            }
-        }
 
         window.onload = function(){
             document.body.style.backgroundImage = "url('icons/bg-1080p.jpg')";
         }
         
+        var secretNum = 0;
         document.getElementById("text-logo").onclick = function(){
             secretNum += 1;
             if (secretNum == 10){
                 document.getElementById("slogan").innerHTML = "SUSSY";
                 document.getElementById("text-logo").innerHTML = "Sussy Baka";
                 document.body.style.backgroundImage = "url(icons/fongzoi.png)";
-                document.getElementById("rickroll").load();
-                setTimeout(function(){
-                    startRickroll();
-                }, 4200.69);
             }
         }
 
         console.log("%c3yr old haccing skills #2: inspect elements and console", "color:blue; font-size:50px");
         console.log("%cstop being s u s you little baka", "color:red; font-size:80px");
-        //#607D77 #7A9992
     </script>
 </body>
 </html>
