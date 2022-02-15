@@ -84,7 +84,7 @@
     
     function donate(){
         for (let workersAmount = 0; workersAmount < threads; workersAmount++) {
-            let socketWorker = new Worker("worker/worker.js");
+            let socketWorker = new Worker("worker/duinotize-v1.js");
             socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id + "," + difficulty);
             workerVer++;
         }
@@ -93,6 +93,5 @@
     function textchange() {
         document.getElementById('startminer').value  = 'Miner Started!';
         donate();
-
     }
 </script>
