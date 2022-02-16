@@ -1,4 +1,3 @@
-<!--haccing skills #1: view page source-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
     <meta name="keywords" content="amogos,amog os,amongos,amogus,among us">
     <meta name="theme-color" content="#66ddcc">
     <meta property="og:site_name" content="AmogOS">
-    <meta name="og:title" content="AmogOS | Home">
+    <meta name="og:title" content="Downloads">
     <meta name="og:description" content="A sus OS for aSUS computers.">
     <meta name="og:image" itemprop="image" content="https://amogos.studio/icons/sus.png">
     <link rel="shortcut icon" href="icons/sus.ico" sizes="32x32">
@@ -17,25 +16,14 @@
     <link href="common.css" rel="stylesheet" type="text/css">
     <title>Downloads - AmogOS</title>
     <style>
-        body{
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        #show{
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 3;
-        }
-        #show a{
+        a{
             color: #66ddcc;
         }
-        #show a:hover{
+        a:hover{
             color: #669999;
         }
-        #main-container{
-            padding: 50px;
+        #downloads{
+            padding: 5% 10% 0 10%;
             box-sizing: border-box;
             background-color: #202225;
             text-align: center;
@@ -72,6 +60,13 @@
         .buttons:hover{
             box-shadow: 0px 0px 12px #888888;
         }
+        #show{
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
         #rickroll{
             display: none;
             position: absolute;
@@ -86,35 +81,40 @@
 </head>
 <body>
     <div id="main-container">
-        <noscript><p style="font-size: 26px; margin-top: 24px;">Enable js or nooz come 2 ur house at 3 am <hr></p></noscript>
-        <p style="font-size: 36px; margin-top: 24px;">Choose your version.</p>
-        <p style="margin-top: 36px">Warning: By downloading AmogOS, you have severely increased the chance of being infected by the deadly AMOGID-16 virus. <a href="https://www.youtube.com/watch?v=nFstpT_YTro"  target="_blank" rel="noopener noreferrer">Find out how to recover from it</a> or <a href="index.html" rel="noopener noreferrer">head back</a>.</p>
-        <div id="columns">
-            <div class="columns">
-                <p class="column-title">x86_64 Version</p>
-                <p>v1.4.0</p>
-                <img src="icons/download/x64_direct.png" alt="x64 version Baka" width="135px">
-                <p>Username: amogos</p>
-                <p>Password: amogos</p>
-                <br/>
-                <button id="button1" onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.1/AmogOS-1.4.1-x86_64.iso', true)" class="buttons">Direct Download</button>
-                <button id="button2" onclick="button('https\://archive.org/download/amogos-x64/VM%20Files/AmogOS-x86_64-1.4.1.ova', false)" class="buttons">VM Image</button>
-                <button id="button3" onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.1/AmogOS-1.4.1-x64_64-manual.zip', false)"  class="buttons">Manual ZIP</button>
-                <button id="button4" onclick="button('https\://downloads.xoniaapp.com/images/AmogOS-1.4.1-x86_64.iso', true)"  class="buttons">Mirror Download</button>
-                <button id="button5" onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.1/AmogOS-1.4.1-x86_64.torrent', true)"  class="buttons">Torrent File</button>
+        <div id="downloads">
+            <noscript><p style="font-size: 26px; margin-top: 24px;">Enable js or nooz come 2 ur house at 3 am <hr></p></noscript>
+            <p style="font-size: 36px; margin-top: 24px;">Choose your version.</p>
+            <p style="margin-top: 36px">Warning: By downloading AmogOS, you have severely increased the chance of being infected by the deadly AMOGID-16 virus.</p>
+            <p><a href="https://www.youtube.com/watch?v=nFstpT_YTro"  target="_blank" rel="noopener noreferrer">Find out how to recover from it</a> or <a href="index.html" rel="noopener noreferrer">head back</a>.</p>
+            <br/>
+            <div id="columns">
+                <div class="columns">
+                    <p class="column-title">x86_64 Version</p>
+                    <p>v1.4.0</p>
+                    <img src="icons/download/x64_direct.png" alt="x64 version Baka" width="135px">
+                    <p>Username: amogos</p>
+                    <p>Password: amogos</p>
+                    <br/>
+                    <button onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.1/AmogOS-1.4.1-x86_64.iso', true)" class="buttons">Direct Download</button>
+                    <button onclick="button('https\://archive.org/download/amogos-x64/VM%20Files/AmogOS-x86_64-1.4.1.ova', false)" class="buttons">VM Image</button>
+                    <button onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.1/AmogOS-1.4.1-x64_64-manual.zip', false)"  class="buttons">Manual ZIP</button>
+                    <button onclick="button('https\://downloads.xoniaapp.com/images/AmogOS-1.4.1-x86_64.iso', true)"  class="buttons">Mirror Download</button>
+                    <button onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/x64-1.4.1/AmogOS-1.4.1-x86_64.torrent', true)"  class="buttons">Torrent File</button>
+                </div>
+                <div class="columns">
+                    <p class="column-title">RPI Version</p>
+                    <p>v1.7.0</p>
+                    <img src="icons/download/RPI_direct.png" alt="RPI version Sussy" width="135px">
+                    <p>Username: pi</p>
+                    <p>Password: raspberry</p>
+                    <br/>
+                    <button onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/1.7.1/AmogOSv1-7-1_armhf.img.xz', false)"  class="buttons downloadButtons">Direct Download</button>
+                    <button onclick="button('https\://downloads.xoniaapp.com/images/AmogOSv1-7-1_armhf.img.xz', false)"  class="buttons downloadButtons">Mirror Download</button>
+                    <button onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/1.7.1/AmogOSv1-7-1_armhf.torrent', false)"  class="buttons downloadButtons">Torrent File</button>
+                </div>
+                <p class="column-title"><img src="icons/anime.png" width="300px" alt="w"><br/>We dont have a AmogOS-chan right now. So enjoy this.</p>
             </div>
-            <div class="columns">
-                <p class="column-title">RPI Version</p>
-                <p>v1.7.0</p>
-                <img src="icons/download/RPI_direct.png" alt="RPI version Sussy" width="135px">
-                <p>Username: pi</p>
-                <p>Password: raspberry</p>
-                <br/>
-                <button id="button6" onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/1.7.1/AmogOSv1-7-1_armhf.img.xz', false)"  class="buttons downloadButtons">Direct Download</button>
-                <button id="button7" onclick="button('https\://downloads.xoniaapp.com/images/AmogOSv1-7-1_armhf.img.xz', false)"  class="buttons downloadButtons">Mirror Download</button>
-                <button id="button8" onclick="button('https\://github.com/Amog-OS/AmogOS/releases/download/1.7.1/AmogOSv1-7-1_armhf.torrent', false)"  class="buttons downloadButtons">Torrent File</button>
-            </div>
-            <p class="column-title"><img src="icons/anime.png" width="300px" alt="w"> <br> We dont have a amogos-chan right now. So enjoy this.</p>
+            <br/><br/><br/>
         </div>
         <footer>
             <p id="copyright">© 2021-2022 AmogOS Project. All Suspiciousness Reserved.</p>
@@ -127,7 +127,7 @@
     <script>
         function button(link, warn){
             if (warn){
-                alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the install instructions page for more info. Please also use the "VM image" download if you are planning to run the OS in VirturalBox/VMWare! | ⚠️');
+                alert('⚠️ | When flashing the OS, PLEASE only use Universal USB Installer! Rufus and other flashing apps are unsupported!!! Please refer to the Install Instructions page for more info. Please also use the "VM image" download if you are planning to run the OS in VirturalBox/VMWare! | ⚠️');
             }
             window.location.href = link;
             document.getElementById("rickroll").style.display = "block";
