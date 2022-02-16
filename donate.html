@@ -24,17 +24,21 @@
             color: #669999;
         }
         #donate{
+            transition: 0.3s ease;
             padding: 12px;
             width: 200px;
             height: 70px;
             outline: none;
-            background-image: linear-gradient(-30deg, #297EFF, #8FC7FF);
+            background-image: linear-gradient(-30deg, #297eff, #8fc7ff);
             color: #ffffff;
             font-size: 18px;
             border: none;
-            border-radius: 18px;
+            border-radius: 20px;
             font-family: "Poppins";
             cursor: pointer;
+        }
+        #donate:hover{
+            box-shadow: 0px 0px 12px #8fc7ff;
         }
     </style>
 </head>
@@ -58,7 +62,7 @@
             <p>If you liked the project, feel free to donate to support the team, or not.</p>
             <p>You can donate with <a href="https://opencollective.com/amogos" 
             target="_blank" rel="noopener noreferrer">OpenCollective</a>, which supports many popular payment methods. It also supports crypto in case you sit on a pile of NFTs... (they're bad)</p>
-            <button id="donate">Open Collective</button>
+            <button id="donate" onclick="window.open('https\://opencollective.com/amogos')">Open Collective</button>
             <br/><br/><br/>
         </div>
         <footer>
