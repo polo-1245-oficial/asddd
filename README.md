@@ -1,6 +1,10 @@
-# Official Website for AmogOS
+# Official website for AmogOS
 
-Made by Fengzi (Discord: 疯子鸭#5218)! 
+## Credit
+Originally made by Fengzi! `Disclaimer: Fengzi is not responsible for any changes beyond the original template.`
+
+Current maintenance mainly by Nooz
+
 (POWERRRR by Moon1789)
 
-Website link: https://amogos.studio/
+### **Website link: https://amogos.studio/**
