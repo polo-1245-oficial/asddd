@@ -7,31 +7,31 @@
 
 <url>
   <loc>https://amogos.studio/</loc>
-  <lastmod>2022-02-10T00:37:57+00:00</lastmod>
+  <lastmod>2022-10-08T00:37:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://amogos.studio/install</loc>
-  <lastmod>2022-02-10T00:37:57+00:00</lastmod>
+  <lastmod>2022-10-08T00:37:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://amogos.studio/downloads</loc>
-  <lastmod>2022-02-10T00:37:57+00:00</lastmod>
+  <lastmod>2022-10-08T00:37:57+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://amogos.studio/startpage/</loc>
-  <lastmod>2022-02-10T00:37:57+00:00</lastmod>
+  <lastmod>2022-10-08T00:37:57+00:00</lastmod>
   <changefreq>never</changefreq>
   <priority>0.20</priority>
 </url>
 <url>
   <loc>https://amogos.studio/about</loc>
-  <lastmod>2022-02-10T00:37:57+00:00</lastmod>
+  <lastmod>2022-10-08T00:37:57+00:00</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0</priority>
 </url>
